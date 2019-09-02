@@ -1,8 +1,7 @@
 from django.db import models
-from django.utils import timezone
 
 class Candidate(models.Model):
-    datetime = models.DateField(default=timezone.now)
+    datetime = models.DateTimeField(auto_now_add=True)
     full_name = models.CharField(max_length=123)
     email = models.EmailField()
     phone = models.BigIntegerField()
