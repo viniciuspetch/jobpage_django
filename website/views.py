@@ -7,7 +7,16 @@ from .forms import CandidateForm
 
 def index(request):
     candidate_list = Candidate.objects.all()
-    form = CandidateForm()
+    form = CandidateForm(initial={
+        'full_name': "Someone",
+        'email': "me@you.com",
+        'phone': "123456789",
+        'pres_letter': "Nothing to say",
+        'linkedin_link': "http://linkedin.com",
+        'github_link': "http://github.com",
+        'eng_level': 123,
+        'salary': 123,
+    })
     context = {
         'candidate_list': candidate_list,
         'form': form,
@@ -18,12 +27,7 @@ def send(request):
     if request.method == 'POST':
         form = CandidateForm(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect(reverse('website:index'))
-    else:
-        form = CandidateForm()
-    context = {
-        'form': form,
-    }
-    return render(request, 'website/index.html', context)
+            form.save()
+    return HttpResponseRedirect(reverse('website:index'))
     
     
