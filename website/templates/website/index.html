@@ -1,9 +1,9 @@
 {% load static %}
 <h1>INDEX</h1>
 <ul>
-    {%for candidate in candidate_list %}
+    {% for candidate in candidate_list %}
     <li>
-        {{ candidate.full_name }}, {{ candidate.email }}
+        {{ candidate.full_name }}, {{ candidate.email }}, {{ candidate.datetime }}
     </li>
     {% endfor %}
 </ul>
