@@ -8,7 +8,7 @@
     {% endfor %}
 </ul>
 
-<form action="{% url 'website:send' %}", method="post" name="candidate_form" onsubmit="return validateForm()" novalidate>
+<form enctype="multipart/form-data" action="{% url 'website:send' %}", method="post" name="candidate_form" onsubmit="return validateForm()" novalidate>
     {% csrf_token %}
     {{ form.non_field_errors }}
 
