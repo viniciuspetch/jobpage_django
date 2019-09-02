@@ -5,11 +5,15 @@ from django.urls import reverse
 from .models import Candidate
 from .forms import CandidateForm
 from django.core.mail import EmailMessage
+import logging
 
 def index(request):    
-    email = EmailMessage('Hello', 'World', to=['user@gmail.com'])
-    email.send()
-
+    logger = logging.getLogger(__name__)
+    try:
+        email = EmailMessage('Hello', 'World', to=['user@gmail.com'])
+        email.send()
+    except:
+        logger.error('E-mail error')
     if request.method == 'POST':
         form = CandidateForm(request.POST, request.FILES)
         if form.is_valid():
