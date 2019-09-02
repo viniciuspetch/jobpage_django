@@ -1,14 +1,7 @@
-{% load static %}
+<!DOCTYPE html>
 <h1>INDEX</h1>
-<ul>
-    {% for candidate in candidate_list %}
-    <li>
-        {{ candidate.full_name }}, {{ candidate.email }}, {{ candidate.datetime }}
-    </li>
-    {% endfor %}
-</ul>
-
-<form enctype="multipart/form-data" action="{% url 'website:send' %}", method="post" name="candidate_form" onsubmit="return validateForm()" novalidate>
+<a href="{% url 'website:user' %}">user</a>
+<form enctype="multipart/form-data" action="{% url 'website:index' %}", method="post" name="candidate_form" onsubmit="return validateForm()" novalidate>
     {% csrf_token %}
     {{ form.non_field_errors }}
 
@@ -30,6 +23,5 @@
         {% endfor %}
     </table>
 
-    <input type="submit" value="send">
+    <input type="submit">Send</input>
 </form>
-<script src="{% static "website/script.js" %}"></script>

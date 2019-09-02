@@ -5,14 +5,13 @@ from django.urls import reverse
 from .models import Candidate
 from .forms import CandidateForm
 
-def index(request):
+def index(request):    
     if request.method == 'POST':
         form = CandidateForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-        return HttpResponseRedirect(reverse('website:index'))
+            return HttpResponseRedirect(reverse('website:index'))
     else:
-        candidate_list = Candidate.objects.all()
         form = CandidateForm(initial={
             'full_name': "Someone",
             'email': "me@you.com",
@@ -23,17 +22,17 @@ def index(request):
             'eng_level': 123,
             'salary': 123,
         })
-        context = {
-            'candidate_list': candidate_list,
-            'form': form,
-        }
+    candidate_list = Candidate.objects.all()
+    context = {
+        'candidate_list': candidate_list,
+        'form': form,
+    }
     return render(request, 'website/index.html', context)
 
-def send(request):
-    if request.method == 'POST':
-        form = CandidateForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-        return HttpResponseRedirect(reverse('website:index'))
+def user(request):
+    context = {
+        'candidate_list': Candidate.objects.all(),
+    }
+    return render(request, 'website/user.html', context)
     
     

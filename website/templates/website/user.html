@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<h1>USER</h1>
+{% if user.is_authenticated %}
+    <p><a href="{% url 'logout' %}">logout</a></p>
+    <ul>
+        {% for candidate in candidate_list %}
+            <li>
+                {{ candidate.full_name }}, {{ candidate.email }}, {{ candidate.datetime }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <a href="{% url 'login' %}">login</a>
+{% endif %}
