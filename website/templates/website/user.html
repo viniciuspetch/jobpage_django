@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <h1>USER</h1>
 {% if user.is_authenticated %}
+    <p>Logged as {{user.username}}</p>
     <p><a href="{% url 'logout' %}">logout</a></p>
     <ul>
         {% for candidate in candidate_list %}
