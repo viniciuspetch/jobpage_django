@@ -25,7 +25,7 @@ def index(request):
 
 def send(request):
     if request.method == 'POST':
-        form = CandidateForm(request.POST)
+        form = CandidateForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
     return HttpResponseRedirect(reverse('website:index'))
