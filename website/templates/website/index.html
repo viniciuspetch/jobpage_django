@@ -1,0 +1,16 @@
+{% load static %}
+<h1>INDEX</h1>
+<ul>
+    {%for candidate in candidate_list %}
+    <li>
+        {{ candidate.full_name }}, {{ candidate.email }}
+    </li>
+    {% endfor %}
+</ul>
+
+<form action="{% url 'website:send' %}", method="post" name="candidate_form" onsubmit="return validateForm()">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Enviar">
+</form>
+<script src="{% static "website/script.js" %}"></script>
