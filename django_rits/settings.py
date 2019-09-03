@@ -134,7 +134,8 @@ LOGIN_REDIRECT_URL = '/user'
 
 LOGOUT_REDIRECT_URL = '/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Host for sending e-mail.
 EMAIL_HOST = 'localhost'
