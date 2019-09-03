@@ -4,3 +4,5 @@ website/templates/website/old_index.txt
 cv_upload/*
 website/static/website/script.js
 *.pyc
+website/telegrambot_old.py
+website/management/commands/bot.py
