@@ -3,3 +3,4 @@ website/form_old2.txt
 website/templates/website/old_index.txt
 cv_upload/*
 website/static/website/script.js
+*.pyc
