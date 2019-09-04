@@ -21,7 +21,6 @@ def index(request):
             'pres_letter': "Nothing to say",
             'linkedin_link': "http://linkedin.com",
             'github_link': "http://github.com",
-            'eng_level': 123,
             'salary': 123,
         })
     candidate_list = Candidate.objects.all()
