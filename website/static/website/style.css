@@ -1,0 +1,119 @@
+@font-face {
+    font-family: ttnorms;    
+    src: url("ttnorms.otf") format("opentype");
+}
+
+.container {
+    font-family: ttnorms;
+    max-width: 100%;
+    padding: 0;
+}
+
+#section1 {
+    background-color: #2e2236;
+    padding: 0px 50px 100px 50px;
+}
+
+#section2 {
+    padding: 50px 0 0 0;
+}
+
+#heading {;
+    text-align: center;
+}
+
+#heading-pretitle {
+    margin: 40px 0 0 0;
+    color: #4eef61;
+    font-size: 12px;
+}
+
+#heading-title {
+    font-size: 46px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 1;
+}
+
+#apply-button {
+    margin: 40px 0px;
+    font-size: 12px;
+    width: 176px;
+    height: 40px;
+    background-color: green;
+    border: 0;
+    border-radius: 100px;    
+}
+
+.form-heading {
+    text-align: center;
+    margin: 50px 0 30px 0;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.field {
+    border: solid 1px black;
+    background-color: white;
+    height: 60px;
+    margin: 3px 0 10px 0;
+    padding: 10px 0 10px 20px;
+    line-height: 1.4;
+}
+
+.field-pres-letter {
+    border: solid 1px black;
+    background-color: white;
+    margin: 3px;
+}
+
+.label {
+    font-size: 10px;
+    color: grey
+}
+
+input{
+    font-size: 16px;
+    border: none;
+    outline: 0;
+    width: 100%;
+}
+
+textarea{
+    height: 300px;
+    font-size: 16px;
+    border: none;
+    outline: 0;
+    width: 100%;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.column {
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.column ul {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+#submit-button {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: green;
+    border: 0;
+    border-radius: 100px;
+    height: 60px;
+}
