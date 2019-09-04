@@ -15,10 +15,15 @@
 }
 
 #section2 {
-    padding: 50px 0 0 0;
+    padding: 50px 0;
 }
 
-#heading {;
+#section3 {
+    background-color: #f6f6f7;
+    padding: 50px 0;
+}
+
+#heading {
     text-align: center;
 }
 
@@ -53,18 +58,35 @@
 }
 
 .field {
-    border: solid 1px black;
-    background-color: white;
+    border-radius: 2px;
+    background-color: #f6f6f7;
     height: 60px;
-    margin: 3px 0 10px 0;
+    margin: 15px 0 0 0;
+    padding: 10px 0 10px 20px;
+    line-height: 1.4;
+}
+
+.field-error {
+    border: solid 2px red;
+    border-radius: 2px;
+    background-color: #f6f6f7;
+    height: 60px;
+    margin: 15px 0 0 0;
     padding: 10px 0 10px 20px;
     line-height: 1.4;
 }
 
 .field-pres-letter {
-    border: solid 1px black;
-    background-color: white;
-    margin: 3px;
+    border-radius: 2px;
+    background-color: #f6f6f7;
+    margin: 15px 0 0 0;
+    padding: 10px 0 10px 20px;
+    line-height: 1.4;
+}
+
+.form-error {
+    color: red;
+    font-size: 12px;
 }
 
 .label {
@@ -72,7 +94,25 @@
     color: grey
 }
 
-input{
+input {
+    background-color: #f6f6f7;
+    font-size: 16px;
+    border: none;
+    outline: 0;
+    width: 100%;
+}
+
+textarea {
+    background-color: #f6f6f7;
+    font-size: 16px;
+    border: none;
+    outline: 0;
+    width: 100%;
+    resize: none;
+}
+
+select {
+    background-color: #f6f6f7;
     font-size: 16px;
     border: none;
     outline: 0;
@@ -116,4 +156,22 @@ input[type="number"] {
     border: 0;
     border-radius: 100px;
     height: 60px;
+    margin: 50px 0 0 0;
+}
+
+#footer-desc1 {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#footer-desc2 {
+    font-size: 14px;
+    text-align: center;
+}
+
+#footer-link {
+    font-size: 18px;
+    font-weight: 1000;
+    color: green;
 }
