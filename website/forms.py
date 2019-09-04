@@ -13,4 +13,5 @@ class CandidateForm(forms.ModelForm):
             'github_link': {'required': "Digite a URL da sua conta do GitHub",},
             'eng_level': {'required': "Selecione o seu nível de inglês",},
             'salary': {'required': "Digite a sua pretensão salarial",},
+            'curriculum': {'required': "Selecione o seu currículo",},
         }
