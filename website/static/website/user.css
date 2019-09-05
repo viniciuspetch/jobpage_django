@@ -1,0 +1,28 @@
+@font-face {
+    font-family: ttnorms;    
+    src: url("ttnorms.otf") format("opentype");
+}
+
+.user-main {
+    font-family: ttnorms;
+    padding: 10px;
+}
+
+#header {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.candidate {
+    padding: 10px 20px;
+}
+
+.candidate ul {
+    border: solid 1px black;
+    border-radius: 2px;
+}
+
+input {
+    margin: 10px;
+}
