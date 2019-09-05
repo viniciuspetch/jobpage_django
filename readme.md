@@ -1,3 +1,5 @@
+# VagasRits em Django
+
 O que foi desenvolvido:
 - One-page para a coleta de candidaturas para uma vaga de emprego
 - Páginas de login e administração para listar os candidatos
@@ -22,16 +24,21 @@ Comandos:
 - Inicializar o telegram bot: python manage.py vagasrits
 
 # Página principal
+
 O site consiste de três páginas, sendo apenas uma feita para ser visualizada pelos candidatos. Foi utilizado o framework Django e seguido o modelo de organização do mesmo. Como camada de "modelo", foi utilizado o sistema de Models do framework, definindo então no arquivo models.py o modelo Candidate, responsável por guardar as informações dos candidatos.
 
 Na camada de "visão" foram implementados as páginas de candidatura e a do administrador. Para a página principal foi utilizado apenas uma rota para a requisição da página e o método POST. Ao receber o POST, os dados recebidos são validados, e caso não estejam corretos a página principal é retornada com os devidos alertas de erro ao usuário.
 
 No front-end, o Django monta as páginas utilizando templates e ModelForm. Assim, é possível realizar algumas alterações na página de maneira simples, e graças ao ModelForm é possível reutilizar o Model criado para os candidatos para então gerar automaticamente os campos do formulário a ser preenchido. Para auxiliar na montagem da página, foi utilizado o bootstrap, tanto em questão da organização dos elementos quanto em elementos visuais.
 
+O sistema de login e a página de administração foram criados a partir do sistema de login já existente do Django. Por isso, a página de login em especial é desenvolvida no diretório principal do projeto, e não no diretório do app. O login se encontra disponível na URL localhost:8000/accounts/login, com o usuário 'user' e senha 'bar'. A página de administração, por fim, lista todos os candidatos já inscritos, e todas suas informações. A página se encontra na URL localhost:8000/user
+
 # Sistema de e-mail
+
 O fato do desenvolvimento ter sido feito no Windows dificultou a automação do envio de e-mails, sendo implementada apenas a etapa manual, que consiste da implementação de um management command e uma função interna para o envio de e-mails. Como não houve acesso à um servidor de e-mails propriamente dito, o Django foi configurado para que todo e-mail enviado fosse mostrado no terminal do servidor.
 
 A função implementada (que pode ser chamada pelo comando 'python manage.py scheduled_email), envia um e-mail para o e-mail user@gmail.com notificando de quantos usuários se cadastraram no dia.
 
 # Bot Telegram
+
 Foi desenvolvido um bot para o Telegram, acoplado ao app responsável pelo site, que responde com a quantidade de candidatos inscritos até o momento, e o e-mail dos três últimos. Do lado do servidor, o bot pode ser chamado pelo comando 'python manage.py vagasrits'. Do lado do usuário, o bot pode ser utilizado mandando a mensagem /VagasRits para @ritsvagasbot.
