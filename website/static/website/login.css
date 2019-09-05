@@ -1,0 +1,16 @@
+@font-face {
+    font-family: ttnorms;    
+    src: url("ttnorms.otf") format("opentype");
+}
+
+.login-main {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-family: ttnorms;
+    padding: 10px;
+}
+
+input {
+    margin: 10px;
+}

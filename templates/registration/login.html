@@ -1,7 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
-<h1>LOGIN</h1>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
-</form>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static "website/login.css" %}">
+  <title>Administration login</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<div class="login-main">
+  <h1>Administration login</h1>
+  <form method="post">
+    {% csrf_token %}
+    Usuário <br>
+    {{ form.username }} <br>
+    Senha <br>
+    {{ form.password }} <br>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
+</body>
+</html>
