@@ -15,3 +15,12 @@ class CandidateForm(forms.ModelForm):
             'salary': {'required': "Digite a sua pretensão salarial",},
             'curriculum': {'required': "Selecione o seu currículo",},
         }
+        widgets = {
+            'full_name': forms.TextInput(attrs={'placeholder': 'José Maria'}),
+            'email': forms.TextInput(attrs={'placeholder': 'josemaria@email.com'}),
+            'phone': forms.Textarea(attrs={'placeholder': '+558499887766'}),
+            'pres_letter': forms.Textarea(attrs={'placeholder': 'Eu sou uma pessoa...'}),
+            'linkedin_link': forms.Textarea(attrs={'placeholder': 'https://www.linkedin.com/x'}),
+            'github_link': forms.Textarea(attrs={'placeholder': 'https://www.github.com/x'}),
+            'salary': forms.Textarea(attrs={'placeholder': '0000,00'}),
+        }
