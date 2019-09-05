@@ -3,15 +3,48 @@
     src: url("ttnorms.otf") format("opentype");
 }
 
+ul.check {
+    list-style-image: url('check.png');
+}
+
 .container {
     font-family: ttnorms;
     max-width: 100%;
     padding: 0;
 }
 
+.menu {
+    float: right;
+}
+
+.menu-item {
+    margin: 0 15px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#menu3 {
+    padding: 10px 0 0 0;
+    margin: 40px 0px;
+    font-size: 12px;
+    width: 176px;
+    height: 40px;
+    background-color: #4eef61;
+    color: black;
+    align-items: center;
+    border: 0;
+    border-radius: 100px;
+}
+
+.section-size {
+    max-width: 80%;
+    margin: auto;
+}
+
 #section1 {
     background-color: #2e2236;
-    padding: 0px 50px 100px 50px;
+    padding: 10px 50px 100px 50px;
 }
 
 #section2 {
@@ -21,6 +54,14 @@
 #section3 {
     background-color: #f6f6f7;
     padding: 50px 0;
+}
+
+#header {
+    align-items: center;
+}
+
+#header-right {
+    float: right;
 }
 
 #heading {
@@ -41,11 +82,14 @@
 }
 
 #apply-button {
+    padding: 10px 0 0 0;
     margin: 40px 0px;
     font-size: 12px;
     width: 176px;
     height: 40px;
-    background-color: green;
+    background-color: #4eef61;
+    color: black;
+    align-items: center;
     border: 0;
     border-radius: 100px;    
 }
@@ -152,7 +196,7 @@ input[type="number"] {
     width: 100%;
     font-size: 20px;
     font-weight: 800;
-    background-color: green;
+    background-color: #4eef61;
     border: 0;
     border-radius: 100px;
     height: 60px;
