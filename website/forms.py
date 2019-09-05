@@ -18,8 +18,4 @@ class CandidateForm(forms.ModelForm):
         widgets = {
             'full_name': forms.TextInput(attrs={'placeholder': 'José Maria'}),
             'email': forms.TextInput(attrs={'placeholder': 'josemaria@email.com'}),
-            'pres_letter': forms.Textarea(attrs={'placeholder': 'Eu sou uma pessoa...'}),
-            'linkedin_link': forms.Textarea(attrs={'placeholder': 'https://www.linkedin.com/x'}),
-            'github_link': forms.Textarea(attrs={'placeholder': 'https://www.github.com/x'}),
-            'salary': forms.Textarea(attrs={'placeholder': '0000,00'}),
         }
